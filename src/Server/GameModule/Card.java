@@ -30,4 +30,8 @@ public class Card implements Comparable<Card>{
     public int compareTo(Card o) {
         return Integer.compare(this.value, o.value);
     }
+
+    protected void checkInfo(){
+        System.out.println(this.suit.toString()+" "+this.value);
+    }
 }

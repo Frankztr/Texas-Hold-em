@@ -5,6 +5,7 @@ public class Messages {
     public static final String ERROR_OCCURRED="Sorry, an error has occurred";
     public static final String ERROR_DECLARE="ERROR: ";
     public static final String ERROR_TYPE_INVALID_CARD_NUMBER="Invalid Card Number";
+    public static final String ERROR_TYPE_INVALID_SUITS_TYPE="Invalid Suits Type";
     public static final String LOSS_GAME="You lost the game";
 
 }
