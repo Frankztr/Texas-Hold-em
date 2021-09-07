@@ -6,6 +6,7 @@ public enum Suits {
     Clovers,
     Pikes;
 
+    //This method is used to turn the enum object into String
     @Override
     public String toString() {
         if(this.equals(Hearts)) return "Hearts";
