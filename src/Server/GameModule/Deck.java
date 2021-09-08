@@ -20,6 +20,13 @@ public class Deck {
     }
 
 
+    public Deck(int number,Deck deck) {
+        for (int i = 0; i < number; i++) {
+            cardSet.add(deck.pickCard());
+            cardNumber = number;
+        }
+    }
+
     protected void checkInfo(){
         System.out.println("----------------------------------------");
         System.out.println("Deck "+cardSet.hashCode()+" Info:");
