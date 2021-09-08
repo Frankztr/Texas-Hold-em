@@ -1,7 +1,12 @@
 package Server.GamePlayer;
 
+import Server.GameModule.MiniDeck;
+
 public abstract class AbstractPlayer {
-    public int stack;
-    public int
+    private int stack;
+    private int win;
+    private int loss;
+    private String name;
+    private MiniDeck miniDeck;
 
 }

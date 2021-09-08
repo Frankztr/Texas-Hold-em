@@ -8,16 +8,17 @@ import java.util.Random;
 import java.util.Set;
 
 public class Deck {
-    private Set<Card> cardSet=new HashSet<>();
-    private int cardNumber=52;
+    protected Set<Card> cardSet=new HashSet<>();
+    protected int cardNumber=52;
     public Deck(){
         for(int i=1;i<14;i++){
-            cardSet.add(new Card(Suits.Clovers,i));
+            cardSet.add(new Card(Suits.Club,i));
             cardSet.add(new Card(Suits.Hearts,i));
-            cardSet.add(new Card(Suits.Pikes,i));
-            cardSet.add(new Card(Suits.Tiles,i));
+            cardSet.add(new Card(Suits.Diamond,i));
+            cardSet.add(new Card(Suits.Spade,i));
         }
     }
+
 
     protected void checkInfo(){
         System.out.println("----------------------------------------");

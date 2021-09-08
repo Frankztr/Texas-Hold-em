@@ -21,11 +21,11 @@ public class Card implements Comparable<Card>{
     }
 
 
-    private Suits getSuit() {
+    public Suits getSuit() {
         return this.suit;
     }
 
-    private int getValue() {
+    public int getValue() {
         return this.value;
     }
 
