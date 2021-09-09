@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-public class Deck {
+public class Deck extends AbstractDeck{
     protected Set<Card> cardSet=new HashSet<>();
     protected int cardNumber=52;
     public Deck(){
@@ -18,27 +18,8 @@ public class Deck {
             cardSet.add(new Card(Suits.Spade,i));
         }
     }
-
-
-    public Deck(int number,Deck deck) {
-        for (int i = 0; i < number; i++) {
-            cardSet.add(deck.pickCard());
-            cardNumber = number;
-        }
-    }
-
-    protected void checkInfo(){
-        System.out.println("----------------------------------------");
-        System.out.println("Deck "+cardSet.hashCode()+" Info:");
-        Card[] tempArray=cardSet.toArray(new Card[cardSet.size()]);
-        for(int i=0;i<tempArray.length;i++){
-            tempArray[i].checkInfo();
-        }
-        System.out.println("----------------------------------------");
-    }
-
-    //Randomly pick and remove one card from the deck
     protected Card pickCard(){
+        cardNumber=cardSet.size();
         Card[] tempArray=cardSet.toArray(new Card[cardSet.size()]);
         Random random=new Random();
         Card ans=tempArray[random.nextInt(cardNumber)];
@@ -48,13 +29,8 @@ public class Deck {
             System.exit(0);
         }
         cardSet.remove(ans);
-        cardNumber--;
+        cardNumber=cardSet.size();
         return ans;
     }
-
-    public int getCardNumber(){
-        return cardNumber;
-    }
-
 
 }

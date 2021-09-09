@@ -17,7 +17,7 @@ public enum Suits {
             System.out.println(Messages.ERROR_OCCURRED);
             System.out.println(Messages.ERROR_DECLARE+Messages.ERROR_TYPE_INVALID_SUITS_TYPE);
             System.exit(0);
-            return "EASTER EGG!!!";
+            return "I have no idea how this message could occur";
         }
     }
 }
